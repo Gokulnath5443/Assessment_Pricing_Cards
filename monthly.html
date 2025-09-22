@@ -38,6 +38,11 @@
             color: rgb(255, 255, 255);
             font-weight: bold;
             border-radius: 10px 0px 0px 0px;
+            background-color: #0069AB;
+        }
+        .box0:hover{
+            background-color: #5D9948;
+            cursor: pointer;
         }
 
         .box5 {
@@ -47,8 +52,12 @@
             color: rgb(255, 255, 255);
             font-weight: bold;
             border-radius: 0px 10px 0px 0px;
+            background-color: #5D9948;
         }
-
+        .box5:hover{
+            background-color:#0069AB ;
+            cursor: pointer;
+        }
         .box6,
         .box7,
         .box8,
@@ -74,7 +83,20 @@
 
         }
 
-        .div11,
+        .div11:hover,
+        .div16:hover,
+        .div21:hover,
+        .div26:hover,
+        .div31:hover,
+        .div36:hover,
+        .div41:hover,
+        .div46:hover,
+        .div51:hover{
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+
+        }
+         .div11,
         .div16,
         .div21,
         .div26,
@@ -85,11 +107,24 @@
         .div51 {
 
             display: flex;
-
             align-items: center;
             font-weight: bold;
             font-size: 16px;
             color: rgb(255, 255, 255);
+        }
+        .div11,
+        .div21,
+        .div31,
+        .div41,
+        .div51 {
+            background-color:#2A2725
+        }
+          
+        .div16,
+        .div26,
+        .div36,
+        .div46 {
+            background-color:#312E2B ;
         }
 
         .box6 {
@@ -114,9 +149,7 @@
             justify-content: center;
             flex-direction: column;
         }
-        .div60{
-            background-color: #3C3936;
-        }
+
         .btn {
             padding: 14px 45px;
             margin-top: 10px;
@@ -128,6 +161,10 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: large;
         }
+        .btn:hover{
+            background-color: #ffffff;
+            color: #22201E;
+        }
 
         .rubee {
             font-size: 12px;
@@ -136,11 +173,16 @@
             color: #a7a6a6;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
+        .rubee:hover{
+            color: #ffffff;
+        }
 
         .btn1 {
             background-color: #008CD1;
         }
-
+        .btn1:hover {
+            background-color: #9edfff;
+        }
         .box11 {
             position: sticky;
             bottom: 0px;
@@ -166,7 +208,6 @@
 .full {
     background-color: #312E2B;
     color: white;
-    
    
 }
 
@@ -332,11 +373,6 @@ margin-bottom: 7px;
 .f4{
 font-size: 14px;
 }
-
-
-
-
-
 /* ........................ */
 .che:hover{
     transform: scale(1.1);
@@ -347,17 +383,7 @@ h1:hover{
     transform: scale(1.1);
     transition:2s;
 }
-  .btn1:hover {
-            background-color: #9edfff;
-        }
-  .rubee:hover{
-            color: #ffffff;
-        }
-      .btn:hover{
-            background-color: #ffffff;
-            color: #22201E;
-        }
-        .f4:hover{
+.f4:hover{
     color: #ffffff;
     text-decoration: underline;
 }
@@ -373,18 +399,40 @@ h1:hover{
     color: #ffffff;
     text-decoration: underline;
 }
-/* ............. */
+/* ........................ */
+.box7,.box8,.box10{
+    background-color: #312E2B;
 
-
-
-
+}
+.box6{
+    background-color: #413E3C;
+}
+.box6:hover{
+    background-color: #ffffff;
+    color: #22201E;
+    cursor: pointer;
+}
+.box9{
+    background-color: #282623;
+}
+.box9:hover{
+    background-color: #ffffff;
+    color: #22201E;
+    cursor: pointer;
+}
+.box7:hover,.box8:hover,.box10:hover{
+    background-color: white;
+    color: #22201E;
+    cursor: pointer;
+}
+/* .................... */
     </style>
 
 
 
 </head>
 
-<body >
+<body>
     <!-- header -->
     <div class="full">
        
@@ -392,7 +440,7 @@ h1:hover{
                 <div class="chess">
                     <div class="c1">
                         <div>
-                            <img class="che" src="./phpNgJfyb.png"  alt="">
+                           <a href="index.html"> <img class="che" src="./phpNgJfyb.png"  alt=""></a>
                         </div>
                         
 
@@ -412,7 +460,7 @@ h1:hover{
             <h1>Choose a plan of after your 7-days free trail</h1>
         </div>
         <div class="month">
-            <a href="">
+            <a href="monthly.html">
                 <h4 class="q1">Monthly</h4>
             </a>
             <a href="index.html">
@@ -420,9 +468,8 @@ h1:hover{
             </a>
 
         </div>
-    
+    </div>
 
-</div>
 
     <!-- header -->
 
@@ -433,20 +480,20 @@ h1:hover{
         <div class="box1"></div>
         <div class="box2"></div>
         <div class="box3"></div>
-        <div class="box0" style="background-color: #0069AB;">Most popular</div>
-        <div class="box5" style="background-color: #5D9948;">Save 71%</div>
-        <div class="box6" style="background-color: #413E3C;">UNLIMITED</div>
-        <div class="box7" style="background-color: #312E2B;"> <span><img src="./gold.2c9115cd.svg"
+        <div class="box0" >Most popular</div>
+        <div class="box5" >Save 71%</div>
+        <div class="box6" >UNLIMITED</div>
+        <div class="box7" > <span><img src="./gold.2c9115cd.svg"
                     style="width:25px; padding-right: 8px;" alt=""></span> Gold</div>
-        <div class="box8" style="background-color: #312E2B;"> <span><img src="./platinum.04465ee0.svg"
+        <div class="box8" > <span><img src="./platinum.04465ee0.svg"
                     style="width:25px; padding-right: 8px;" alt=""></span>Platinum</div>
-        <div class="box9" style="background-color: #282623;"> <span><img src="./diamond.dc7a47aa.svg"
+        <div class="box9" > <span><img src="./diamond.dc7a47aa.svg"
                     style="width:25px; padding-right: 8px;" alt=""></span>Diamond</div>
-        <div class="box10" style="background-color: #312E2B;"> <span><img src="./heart-green.b65098b1.svg"
+        <div class="box10" > <span><img src="./heart-green.b65098b1.svg"
                     style="width:25px; padding-right: 8px;" alt=""></span> Friend & Family 
                 <button class="baa">2-6 MEMBERS</button></div>
         <!-- body box -->
-        <div class="div11 " style="background-color:#2A2725 ;">
+        <div class="div11 ">
             <div>
                 <img src="./move-best.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -457,13 +504,13 @@ h1:hover{
         </div>
         <div class="div12 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div13 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+        <div class="div13 boxbody" style="background-color:#2A2725 ; " > <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div10 boxbody" style="background-color:#22201E;"> <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div15 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div16 " style="background-color:#312E2B ;">
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div16 " >
             <div>
                 <img src="./lessons.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -478,8 +525,8 @@ h1:hover{
         <div class="div19 boxbody" style="background-color:#282623 ;"> <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div20 boxbody" style="background-color:#312E2B ;"> <span class="tick"
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div21 " style="background-color:#2A2725 ;">
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div21 ">
             <div>
                 <img src="./device-bot.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -495,8 +542,8 @@ h1:hover{
         <div class="div20 boxbody" style="background-color:#22201E ;"> <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div25 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div26 " style="background-color:#312E2B ;">
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div26 " >
             <div>
                 <img src="./coachdavid.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -511,8 +558,8 @@ h1:hover{
         <div class="div29 boxbody" style="background-color:#282623;"> <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="di25 boxbody" style="background-color:#312E2B ;"> <span class="tick"
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div31 " style="background-color:#2A2725 ;">
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div31 " >
             <div>
                 <img src="./commerce-adfree.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -528,8 +575,8 @@ h1:hover{
         <div class="div30 boxbody" style="background-color:#22201E ;"> <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div35 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div36 " style="background-color:#312E2B ;">
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div36 " >
             <div>
                 <img src="./move-best.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -545,8 +592,8 @@ h1:hover{
         <div class="div39 boxbody" style="background-color:#282623 ;"> <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div40 boxbody" style="background-color:#312E2B ;"> <span class="tick"
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div41 " style="background-color:#2A2725 ;">
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div41 " >
             <div>
                 <img src="./move-brilliant.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -564,8 +611,8 @@ h1:hover{
         <div class="div44 boxbody" style="background-color:#22201E ;"> <span class="tick"
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div45 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div46 " style="background-color:#312E2B ;">
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div46 " >
             <div>
                 <img src="./puzzle-hint.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -583,8 +630,8 @@ h1:hover{
         <div class="div49 boxbody" style="background-color:#282623;"> <span
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div50 boxbody" style="background-color:#312E2B ;"> <span
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
-        <div class="div51 " style="background-color:#2A2725 ;">
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div51 " >
             <div>
                 <img src="./book-mark-aqua.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
             </div>
@@ -602,7 +649,7 @@ h1:hover{
         <div class="div50 boxbody" style="background-color:#22201E ;"> <span
                 style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
         <div class="div55 boxbody" style="background-color:#2A2725 ;"> <span
-                style="color:#838280; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+                style="color:#7F7D7C; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
 
 
         <!-- bottom box -->
@@ -610,18 +657,18 @@ h1:hover{
         <div class="div56 box11" style="background-color:#312E2B ;"></div>
         <div class="div57 box11" style="background-color:#312E2B ;">
             <div><button class="btn ">Try for ₹0.00</button></div>
-            <div class="rubee">₹199/mo* after 7 days</div>
+            <div class="rubee">₹133.25/mo* after 7 days</div>
         </div>
         <div class="div58 box11" style="background-color:#312E2B ;">
             <div><button class="btn ">Try for ₹0.00</button></div>
-            <div class="rubee">₹349/mo* after 7 days</div>
+            <div class="rubee">₹208.25/mo* after 7 days</div>
         </div>
         <div class="div59 box11" style="background-color:#282623 ;">
             <div><button class="btn btn1">Try for ₹0.00</button></div>
-            <div class="rubee">₹549/mo* after 7 days</div>
+            <div class="rubee">₹316.59/mo* after 7 days</div>
         </div>
-        <div class="div60 box11" style="background-color:#312E2B;">
-            <div><button class="btn " style="color: #7D7B7A;"> Try for ₹0.00 </button></div>
+        <div class="div60 box11" style="background-color:#312E2B ;">
+            <div><button class="btn "> Try for ₹0.00 </button></div>
             <div class="rubee">Available as a yearly plan</div>
         </div>
 
@@ -653,6 +700,7 @@ h1:hover{
     </footer>
 
     <!-- footer -->
+
 
 
 </body>

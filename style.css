@@ -1,0 +1,167 @@
+/* heady */
+.full {
+    background-color: #312E2B;
+    color: white;
+   
+}
+
+.chess {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+  
+}
+
+.c1{
+color: rgb(255, 255, 255);
+display: flex;
+
+
+}
+.che{
+    width: 130px;
+    height: 40px;
+}
+/* Help | Signup | login */
+.c2 {
+    display: flex;
+    padding-top: 5px;
+   
+}
+
+/* That Questionmark */
+.c2 i {
+    position: relative;
+    left: 100px;
+    top: 5px;
+    color: rgb(161, 161, 161);
+
+}
+
+.c2 p {
+    margin-top: 5px;
+    color: rgb(161, 161, 161);
+    margin-left: 105px;
+}
+
+
+
+.help{
+    display: flex;
+}
+
+.help:hover {
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+}
+
+
+.button1{
+    border: none;
+    height: 30px;
+    width: 75px;
+    margin-left: 10px;
+    background-color: rgb(129, 182, 76);
+    color: white;
+    border-radius: 3px;
+    font-weight: 700;
+    
+}
+
+.button1:hover {
+    background-color: rgb(115, 255, 115);
+    transition-duration: 1s;
+    cursor: pointer;
+    transform: scale(1.05);
+    
+}
+
+        
+
+.button2 {
+    border: none;
+    height: 30px;
+    width: 75px;
+    margin-left: 10px;
+    background-color: rgb(70, 67, 65);
+    color: rgb(161, 161, 161);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.button2:hover {
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+/* Heading div */
+
+.h1 {
+    color: white;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 22px;
+}
+a{
+    text-decoration: none;
+}
+.month {
+    display: flex;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.q1 {
+    color: rgb(161, 161, 161);
+    font-size: 17px;
+   
+}
+.q1:hover {
+    color: white;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.q2:hover {
+    color: white;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.q2 {
+    color: rgb(161, 161, 161);
+   
+     font-size: 17px;
+}
+
+/* Footer */
+.foot {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+}
+
+.f1 {
+    margin-bottom: 30px;
+     font-size: 14px;
+   
+   
+}
+footer{
+    color:#DFDFDF;
+    margin-top: 35px;
+   
+}
+.f2{
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+.f3{
+font-size: 14px;
+margin-bottom: 7px;
+}
+.f4{
+font-size: 14px;
+}

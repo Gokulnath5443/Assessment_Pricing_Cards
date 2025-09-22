@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        body {
+            background-color: #312E2B;
+            padding-left: 55px;
+            padding-right: 55px;
+            padding-bottom: 30px;
+
+
+        }
+
+        .subcontainer {
+            /* background-color: #f8a858; */
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 33px 78px 59px 59px 59px 59px 59px 59px 59px 59px 59px 102px;
+            position: relative;
+        }
+
+        .box0 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            border-radius: 10px 0px 0px 0px;
+        }
+
+        .box5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            border-radius: 0px 10px 0px 0px;
+        }
+
+        .box6,
+        .box7,
+        .box8,
+        .box9,
+        .box10 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        .boxbody {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: large;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .div11,
+        .div16,
+        .div21,
+        .div26,
+        .div31,
+        .div36,
+        .div41,
+        .div46,
+        .div51 {
+
+            display: flex;
+
+            align-items: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+        }
+
+        .box6 {
+            border-radius: 7px 7px 0px 0px;
+        }
+
+        .div56 {
+            color: #E3E3E3;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            font-size: 15px;
+        }
+
+        .div57,
+        .div58,
+        .div59,
+        .div60 {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .btn {
+            padding: 14px 45px;
+            margin-top: 10px;
+            background-color: #464341;
+            border: none;
+            border-radius: 5px;
+            color: #E0E0DF;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+        .btn:hover{
+            background-color: #ffffff;
+            color: #22201E;
+        }
+
+        .rubee {
+            font-size: 12px;
+            margin-top: 9px;
+            font-weight: bold;
+            color: #a7a6a6;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .rubee:hover{
+            color: #ffffff;
+        }
+
+        .btn1 {
+            background-color: #008CD1;
+        }
+        .btn1:hover {
+            background-color: #9edfff;
+        }
+        .box11 {
+            position: sticky;
+            bottom: 0px;
+
+        }
+        .box10{
+            position: relative;
+        }
+        .baa{
+            position: absolute;
+            border: none;
+            background-color: #666564;
+            font-weight: bold;
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 3px 2px;
+            top: 68px;
+        }
+
+/* .......................... */
+
+/* heady */
+.full {
+    background-color: #312E2B;
+    color: white;
+   
+}
+
+.chess {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+  
+}
+
+.c1{
+color: rgb(255, 255, 255);
+display: flex;
+
+
+}
+.che{
+    width: 130px;
+    height: 40px;
+}
+/* Help | Signup | login */
+.c2 {
+    display: flex;
+    padding-top: 5px;
+   
+}
+
+/* That Questionmark */
+.c2 i {
+    position: relative;
+    left: 100px;
+    top: 5px;
+    color: rgb(161, 161, 161);
+
+}
+
+.c2 p {
+    margin-top: 5px;
+    color: rgb(161, 161, 161);
+    margin-left: 105px;
+}
+
+
+
+.help{
+    display: flex;
+}
+
+.help:hover {
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+}
+
+
+.button1{
+    border: none;
+    height: 30px;
+    width: 75px;
+    margin-left: 10px;
+    background-color: rgb(129, 182, 76);
+    color: white;
+    border-radius: 3px;
+    font-weight: 700;
+    
+}
+
+.button1:hover {
+    background-color: rgb(115, 255, 115);
+    transition-duration: 1s;
+    cursor: pointer;
+    transform: scale(1.05);
+    
+}
+
+        
+
+.button2 {
+    border: none;
+    height: 30px;
+    width: 75px;
+    margin-left: 10px;
+    background-color: rgb(70, 67, 65);
+    color: rgb(161, 161, 161);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.button2:hover {
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+/* Heading div */
+
+.h1 {
+    color: white;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 22px;
+}
+a{
+    text-decoration: none;
+}
+.month {
+    display: flex;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.q1 {
+    color: rgb(161, 161, 161);
+    font-size: 17px;
+   
+}
+.q1:hover {
+    color: white;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.q2:hover {
+    color: white;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.q2 {
+    color: rgb(161, 161, 161);
+   
+     font-size: 17px;
+}
+
+/* Footer */
+.foot {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+}
+
+.f1 {
+    margin-bottom: 30px;
+     font-size: 14px;
+   
+   
+}
+footer{
+    color:#DFDFDF;
+    margin-top: 35px;
+   
+}
+.f2{
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+.f3{
+font-size: 14px;
+margin-bottom: 7px;
+}
+.f4{
+font-size: 14px;
+}
+/* ........................ */
+.che:hover{
+    transform: scale(1.1);
+    transition: 2s;
+    
+}
+h1:hover{
+    transform: scale(1.1);
+    transition:2s;
+}
+.f4:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.f1:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.f2:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.f3:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+/* ........................ */
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="full">
+       
+            <header>
+                <div class="chess">
+                    <div class="c1">
+                        <div>
+                           <a href="index.html"> <img class="che" src="./phpNgJfyb.png"  alt=""></a>
+                        </div>
+                        
+
+                    </div>
+                    <div class="c2">
+                        <div class="help">
+                            <i class="fa fa-question-circle"></i>
+                            <p>Help</p>
+                        </div>
+                        <button class="button1">Sign Up</button>
+                        <button class="button2">Log In</button>
+                    </div>
+                </div>
+            </header>
+       
+        <div class="h1">
+            <h1>Choose a plan of after your 7-days free trail</h1>
+        </div>
+        <div class="month">
+            <a href="monthly.html">
+                <h4 class="q1">Monthly</h4>
+            </a>
+            <a href="index.html">
+                <h4 class="q2">Yearly (save 42%)</h4>
+            </a>
+
+        </div>
+    </div>
+
+
+    <!-- header -->
+
+
+
+
+    <div class="subcontainer">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box0" style="background-color: #0069AB;">Most popular</div>
+        <div class="box5" style="background-color: #5D9948;">Save 71%</div>
+        <div class="box6" style="background-color: #413E3C;">UNLIMITED</div>
+        <div class="box7" style="background-color: #312E2B;"> <span><img src="./gold.2c9115cd.svg"
+                    style="width:25px; padding-right: 8px;" alt=""></span> Gold</div>
+        <div class="box8" style="background-color: #312E2B;"> <span><img src="./platinum.04465ee0.svg"
+                    style="width:25px; padding-right: 8px;" alt=""></span>Platinum</div>
+        <div class="box9" style="background-color: #282623;"> <span><img src="./diamond.dc7a47aa.svg"
+                    style="width:25px; padding-right: 8px;" alt=""></span>Diamond</div>
+        <div class="box10" style="background-color: #312E2B;"> <span><img src="./heart-green.b65098b1.svg"
+                    style="width:25px; padding-right: 8px;" alt=""></span> Friend & Family 
+                <button class="baa">2-6 MEMBERS</button></div>
+        <!-- body box -->
+        <div class="div11 " style="background-color:#2A2725 ;">
+            <div>
+                <img src="./move-best.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                Puzzles
+            </div>
+
+        </div>
+        <div class="div12 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div13 boxbody" style="background-color:#2A2725 ; " > <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div10 boxbody" style="background-color:#22201E;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div15 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div16 " style="background-color:#312E2B ;">
+            <div>
+                <img src="./lessons.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                Lessons
+            </div>
+        </div>
+        <div class="div17 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div18 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div19 boxbody" style="background-color:#282623 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div20 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div21 " style="background-color:#2A2725 ;">
+            <div>
+                <img src="./device-bot.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                Bots
+            </div>
+
+        </div>
+        <div class="div22 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div23 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div20 boxbody" style="background-color:#22201E ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div25 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div26 " style="background-color:#312E2B ;">
+            <div>
+                <img src="./coachdavid.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                Play Coach <i class="fa fa-info-circle"></i>
+            </div>
+        </div>
+        <div class="div27 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div28 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div29 boxbody" style="background-color:#282623;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="di25 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div31 " style="background-color:#2A2725 ;">
+            <div>
+                <img src="./commerce-adfree.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                No Ads
+            </div>
+
+        </div>
+        <div class="div32 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div33 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div30 boxbody" style="background-color:#22201E ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div35 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div36 " style="background-color:#312E2B ;">
+            <div>
+                <img src="./move-best.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                Game Review
+            </div>
+        </div>
+        <div class="div37 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#838280;font-family: monospace; font-size: xxx-large; font-weight: bold "> &times</span>
+        </div>
+        <div class="div38 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div39 boxbody" style="background-color:#282623 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div40 boxbody" style="background-color:#312E2B ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div41 " style="background-color:#2A2725 ;">
+            <div>
+                <img src="./move-brilliant.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                Move Explanations <i class="fa fa-info-circle"></i>
+            </div>
+
+        </div>
+        <div class="div42 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#838280;font-family: monospace; font-size: xxx-large; font-weight: bold ">&times</span>
+        </div>
+        <div class="div43 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#838280;font-family: monospace; font-size: xxx-large; font-weight: bold "> &times</span>
+        </div>
+        <div class="div44 boxbody" style="background-color:#22201E ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div45 boxbody" style="background-color:#2A2725 ;"> <span class="tick"
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div46 " style="background-color:#312E2B ;">
+            <div>
+                <img src="./puzzle-hint.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                Insights <i class="fa fa-info-circle"></i>
+            </div>
+
+        </div>
+        <div class="div47 boxbody" style="background-color:#312E2B ;"> <span
+                style="color:#838280;font-family: monospace; font-size: xxx-large; font-weight: bold ">&times</span>
+        </div>
+        <div class="div48 boxbody" style="background-color:#312E2B ;"> <span
+                style="color:#838280;font-family: monospace; font-size: xxx-large; font-weight: bold ">&times </span>
+        </div>
+        <div class="div49 boxbody" style="background-color:#282623;"> <span
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div50 boxbody" style="background-color:#312E2B ;"> <span
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div51 " style="background-color:#2A2725 ;">
+            <div>
+                <img src="./book-mark-aqua.svg" alt="" style="width: 30px; padding-left: 15px; padding-right: 20px; ">
+            </div>
+            <div>
+                Courses Perks <i class="fa fa-info-circle"></i>
+            </div>
+
+        </div>
+        <div class="div52 boxbody" style="background-color:#2A2725 ;"> <span
+                style="color:#838280; font-family: monospace; font-size: xxx-large; font-weight: bold ">&times</span>
+        </div>
+        <div class="div53 boxbody" style="background-color:#2A2725 ;"> <span
+                style="color:#838280;font-family: monospace; font-size: xxx-large; font-weight: bold ">&times </span>
+        </div>
+        <div class="div50 boxbody" style="background-color:#22201E ;"> <span
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+        <div class="div55 boxbody" style="background-color:#2A2725 ;"> <span
+                style="color:#DFDFDF; font-size: xx-large; font-weight: bold "> &#x2713; </span></div>
+
+
+        <!-- bottom box -->
+
+        <div class="div56 box11" style="background-color:#312E2B ;">*When billed yearly</div>
+        <div class="div57 box11" style="background-color:#312E2B ;">
+            <div><button class="btn ">Try for ₹0.00</button></div>
+            <div class="rubee">₹133.25/mo* after 7 days</div>
+        </div>
+        <div class="div58 box11" style="background-color:#312E2B ;">
+            <div><button class="btn ">Try for ₹0.00</button></div>
+            <div class="rubee">₹208.25/mo* after 7 days</div>
+        </div>
+        <div class="div59 box11" style="background-color:#282623 ;">
+            <div><button class="btn btn1">Try for ₹0.00</button></div>
+            <div class="rubee">₹316.59/mo* after 7 days</div>
+        </div>
+        <div class="div60 box11" style="background-color:#312E2B ;">
+            <div><button class="btn "> Try for ₹0.00 </button></div>
+            <div class="rubee">₹541.59/mo* after 7 days</div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- foooter -->
+
+    <footer>
+        <div class="foot">
+            <div class="f1">
+                Prices for all plans include taxes
+            </div>
+            <div class="f2">
+            All Premium Plans Include:
+            </div>
+            <div class="f3">
+                Endgames,Daily puzzle Explanations,Video Library,Opening Explorer,Custom Flair,Drills,
+            </div>
+            <div class="f4">
+                andTime-outProtection For Daily Games
+            </div>
+
+
+        </div>
+        </div>
+    </footer>
+
+    <!-- footer -->
+
+
+
+</body>
+
+</html>
